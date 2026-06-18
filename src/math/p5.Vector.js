@@ -2826,8 +2826,10 @@ class Vector {
       values = args;
     }
 
+    if (values.length !== this.values.length) return false;
+
     for (let i = 0; i < this.values.length; i++) {
-      if (this.values[i] !== (values[i] || 0)) {
+      if (this.values[i] !== values[i]) {
         return false;
       }
     }
